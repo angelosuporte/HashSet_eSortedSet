@@ -18,6 +18,11 @@ namespace HashSet_eSortedSet
                 Console.WriteLine(item);
             }
 
+            Console.WriteLine();
+            Console.Write("No conjunto contém Desktop? ");
+            Console.WriteLine(conjunto.Contains("Desktop"));
+
+            Console.ReadKey();
         }
     }
 }
