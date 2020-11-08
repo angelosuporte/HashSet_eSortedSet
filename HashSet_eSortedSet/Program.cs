@@ -7,22 +7,23 @@ namespace HashSet_eSortedSet
     {
         static void Main(string[] args)
         {
-            HashSet<string> conjunto = new HashSet<string>();
+            SortedSet<int> conjuntoA = new SortedSet<int>() { 0, 2, 4, 5, 6, 8, 9 };
+            SortedSet<int> conjuntoB = new SortedSet<int>() { 5, 7, 8, 9, 10 };
 
-            conjunto.Add("TV");
-            conjunto.Add("Notebook");
-            conjunto.Add("Tablet");
-
-            foreach (string item in conjunto)
-            {
-                Console.WriteLine(item);
-            }
-
-            Console.WriteLine();
-            Console.Write("No conjunto contém Desktop? ");
-            Console.WriteLine(conjunto.Contains("Desktop"));
+            ImprimirConjunto(conjuntoA);
+            ImprimirConjunto(conjuntoB);
 
             Console.ReadKey();
         }
+
+        static void ImprimirConjunto<T>(IEnumerable<T> conjunto)
+        {
+            foreach (T objeto in conjunto)
+            {
+                Console.Write(objeto + " ");
+            }
+            Console.WriteLine();
+        }
+
     }
 }
