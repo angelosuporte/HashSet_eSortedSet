@@ -13,7 +13,10 @@ namespace HashSet_eSortedSet
             conjunto.Add("Notebook");
             conjunto.Add("Tablet");
 
-            Console.WriteLine(conjunto.Contains("Computer")); //vai verificar se no conjunto contem Computer
+            foreach (string item in conjunto)
+            {
+                Console.WriteLine(item);
+            }
 
         }
     }
