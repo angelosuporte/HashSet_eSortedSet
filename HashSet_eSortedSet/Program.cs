@@ -13,13 +13,26 @@ namespace HashSet_eSortedSet
             ImprimirConjunto(conjuntoA);
             ImprimirConjunto(conjuntoB);
 
+            //União
             Console.WriteLine();
             Console.Write("União: ");
             SortedSet<int> conjuntoC = new SortedSet<int>(conjuntoA);
             conjuntoC.UnionWith(conjuntoB);
             ImprimirConjunto(conjuntoC);
 
+            //Interseção
+            Console.WriteLine();
+            Console.Write("Interseção: ");
+            SortedSet<int> conjuntoD = new SortedSet<int>(conjuntoA);
+            conjuntoD.IntersectWith(conjuntoB);
+            ImprimirConjunto(conjuntoD);
 
+            //Diferença
+            Console.WriteLine();
+            Console.Write("Diferença: ");
+            SortedSet<int> conjuntoE = new SortedSet<int>(conjuntoA);
+            conjuntoE.ExceptWith(conjuntoB);
+            ImprimirConjunto(conjuntoE);
 
             Console.ReadKey();
         }
